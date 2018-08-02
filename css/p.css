@@ -1,237 +1,126 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-
 /* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-
 body {
-    line-height: 1;
+	line-height: 1;
 }
-
-ol,
-ul {
-    list-style: none;
+ol, ul {
+	list-style: none;
 }
-
-blockquote,
-q {
-    quotes: none;
+blockquote, q {
+	quotes: none;
 }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
-
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.all{
+	width: 1024px;
+	margin: 0 auto;
+}
+.header{
+	height: 25px;
+	padding-top: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 15px;
+	background: yellow;
+
+	
+}
+.header ul{
+	float: right;
+
+}
+.header li{
+	display: inline;
+	width: 100px;
+	height: 50px;
+	margin-right: 5px;
+	
+	
+}
+.header li a{
+	text-decoration: none;
+	font-weight: bold;
+}
+.header h1{
+	/*padding-top: 15px;*/
+	font-size: 30px;
+	font-weight: bold;
+	display: inline;
+}
+.picture{
+	height: 725px;
+	background-image: url(../images/map.jpg);
+}
+.topmenu{
+
+	height: 30px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 20px;
+	padding-left: 20px;
+	background:-webkit-linear-gradient(yellow,red);
+	
+}
+.nationalpark{
+	float: left;
+
 }
 
-.all {
-    width: 1024px;
-    margin: 0 auto;
+.nationalpark a{
+
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  /*background: blue;*/
+  /*border: 1px solid gray;*/
+  display: block;
+  text-align: center;
+  transition: all .3s;
 }
-
-.header {
-    height: 90px;
-    padding-top: 25px;
-    margin-top: 0;
-    /* height: 25px;
-    padding-top: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 15px;
-    background: yellow; */
+.nationalpark a:hover,.nationalpark a.active{
+  background: -webkit-linear-gradient(blue,gray);;
+  color: #fff
 }
-
-.information {
-    float: left;
+.nationalpark > li{
+  float: left;
+  width: 155px;
 }
-
-.detial {
-    float: left;
+.nationalpark ul{
+	display: none;
 }
-
-.list-inline {
-    padding-left: 0;
-    margin-left: -5px;
-    list-style: none;
+.nationalpark>li:hover ul{
+	display: block;
 }
-
-.header li {
-    display: inline;
-    width: 100px;
-    height: 50px;
-    margin-right: 5px;
-}
-
-.header li a {
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.header h1 {
-    /*padding-top: 15px;*/
-    font-size: 30px;
-    font-weight: bold;
-    display: inline;
-}
-
-.picture {
-    height: 260px;
-    /* background-image: url(../images/map.jpg); */
-}
-
-.topmenu {
-    height: auto;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-right: 20px;
-    padding-left: 20px;
-    background: #032f3e;
-    /* background: -webkit-linear-gradient(yellow, red); */
-}
-
-.nationalpark {
-    float: left;
-}
-
-.nationalpark a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    /*background: blue;*/
-    /*border: 1px solid gray;*/
-    display: block;
-    text-align: center;
-    transition: all .3s;
-}
-
-.nationalpark a:hover,
-.nationalpark a.active {
-    background: -webkit-linear-gradient(blue, gray);
-    ;
-    color: #fff
-}
-
-.nationalpark>li {
-    float: left;
-    width: 155px;
-}
-
-.nationalpark ul {
-    display: none;
-}
-
-.nationalpark>li:hover ul {
-    display: block;
-}
-
-
 /*.topmenu li{
 	width: 130px;
 	/*height: 30px;
@@ -242,94 +131,66 @@ table {
 	}
 */
 
-.main {
-    height: 1000px;
-    /* background: #FFD700; */
-    padding-right: 30px;
-    padding-left: 30px;
+
+.main{
+	height: 1000px;
+	background: #FFD700;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.title{
+	font-size: 25px;
+	color: blue;
+	margin-bottom: 10px;
+}
+.content{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.book{
+	padding-top: 10px;
+	padding-left: 10px;
+	border-left: 3px solid #d6d6d6;
+	border-right: 3px solid #d6d6d6;
+	border-bottom:6px solid #d6d6d6;
+	border-top:6px solid #d6d6d6;
+	height: 900px;
+	background: #DAA520;
+}
+.photo h2{
+	width: 400px;
+	height: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+.photo p{
+	width: 400px;
+	letter-spacing: 3px;
+	line-height: 18px;
+	
+}
+.photo img{
+	width: 400px;
+	height: 300px;
 }
 
-.sections {
-    padding-top: 85px;
-    padding-bottom: 105px;
-    overflow: hidden;
+.photo li{
+	float: left;
+	width: 400px;
+	height: 300px;
+	margin-right: 20px;
+	margin-bottom:135px;
+	margin-left: 30px;
+	border: 2px solid gray;
 }
 
-.title {
-    font-size: 25px;
-    color: blue;
-    margin-bottom: 10px;
+.footer{
+	
+	background: -webkit-linear-gradient(yellow,red);;
 }
-
-.content {
-    font-size: 20px;
-    margin-bottom: 10px;
+.footer p{
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: bold;
 }
-
-.book {
-    padding-top: 10px;
-    padding-left: 10px;
-    border-left: 3px solid #d6d6d6;
-    border-right: 3px solid #d6d6d6;
-    border-bottom: 6px solid #d6d6d6;
-    border-top: 6px solid #d6d6d6;
-    height: 900px;
-    background: #DAA520;
-}
-
-.photo h2 {
-    width: 400px;
-    height: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.photo p {
-    width: 400px;
-    letter-spacing: 3px;
-    line-height: 18px;
-}
-
-.photo img {
-    width: 400px;
-    height: 300px;
-}
-
-.photo li {
-    float: left;
-    width: 400px;
-    height: 300px;
-    margin-right: 20px;
-    margin-bottom: 135px;
-    margin-left: 30px;
-    border: 2px solid gray;
-}
-
-.footer {
-    background: -webkit-linear-gradient(yellow, red);
-    ;
-}
-
-.footer p {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: bold;
-}
-
-#map {
-    height: 100%;
-}
-
-
-/* Optional: Makes the sample page fill the window. */
-
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-
-/**********************************************/
