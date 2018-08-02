@@ -10189,21 +10189,33 @@ var data=
         if (searchValue == data[i].district) {
             // areaname.text(data[i].name);
             // address.html("地址:"+data[i].address);
-            str += `<div class="card" >
+            $('.modal-body').html(data[i].name);
+            str += `<div class="card w-50 bg-light">
             <div class="card-body" >
             <h5 class="card-title areaName">`+data[i].name+`</h5>
-            <p class="card-text mb-2">`+data[i].introduction+`</p> 
+            
             <p class="card-text">`+data[i].address+`</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">詳細介紹
             </div>
             </div>`
-
+            
             // `<p class="card-text listin alert alert-primary">
             // `+"景點介紹:"+"<br>"+data[i].introduction+`
             // </p>`+data[i].name+`<p class="address alert">`+data[i].address+`</p>`;
+            
             card.html(str);
+            
+            // detaildata();
+            // $('.modal-body').html('gggg');
         }
     }
-}
+   
+    }
+
+  
+
+
+
   // $.ajax({
   //   url: '/data.json',
   //   type: 'get',
