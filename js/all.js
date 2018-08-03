@@ -10189,33 +10189,98 @@ var data=
         if (searchValue == data[i].district) {
             // areaname.text(data[i].name);
             // address.html("地址:"+data[i].address);
-            $('.modal-body').html(data[i].name);
+            // $('.modal-body').html(data[i].name);
+            // $('.modal-body').html(data[i].address);
             str += `<div class="card w-50 bg-light">
             <div class="card-body" >
             <h5 class="card-title areaName">`+data[i].name+`</h5>
             
             <p class="card-text">`+data[i].address+`</p>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">詳細介紹
+            <div class="tt">
+            <button type="button" class="btn btn-primary" data-viewNo="`+data[i].id+`"data-toggle="modal" data-target="#exampleModalLong">詳細介紹
+            </div>
             </div>
             </div>`
-            
+
             // `<p class="card-text listin alert alert-primary">
             // `+"景點介紹:"+"<br>"+data[i].introduction+`
             // </p>`+data[i].name+`<p class="address alert">`+data[i].address+`</p>`;
+         
             
-            card.html(str);
             
-            // detaildata();
-            // $('.modal-body').html('gggg');
+           
         }
+        card.html(str);
+        detaildata()
     }
    
     }
-
   
+            
+//觸發動態產生之按鈕
+// function  detaildata(){
+// var readMoreButton= $('.btn-primary');
+// console.log(readMoreButton.length);
+// for (var i = 0; i < readMoreButton.length; i++) {
+// //   var readMoreButton= $('.btn-primary');
+//   $(readMoreButton[i]).on('click','.btn-primary',function(e) {
+//     var dd=e.srcElement.getAttribute('data-viewNo');
+//     console.log(dd);
+//     showViewData(e.srcElement.getAttribute('data-viewNo'));
+// //     // console.log(readMoreButton[i]);
+// //     // console.log(e.target.attr('data-viewNo'));
+// //   // showViewData(e.target.attr('data-viewNo'));
+// })
+// }
+// }
+// 
+  // for (var i = 0; i < readMoreButton.length; i++) {
+  //   readMoreButton[i].addEventListener('click', function(e) {
+  //       showViewData(e.srcElement.getAttribute('data-viewNo'));
+  //   }, false);
 
+// }
+// })
+function detaildata(){
+      // $('.content').on( "click",".btn-primary", function(e) {
+        var readMoreButton = document.querySelectorAll('.btn-primary');
+        for (var i = 0; i < readMoreButton.length; i++) {
+          readMoreButton[i].addEventListener('click', function(e) {
+              showViewData(e.srcElement.getAttribute('data-viewNo'));
+          }, false);
+      }
+        // alert(e.target.attr('id'));
+        // console.log(s)
+      //   var s=$('.btn-primary');
+      // for (var i = 0; s.length > i; i++) {
+      //   // console.log(data[i]);
+      //   // console.log(i);
+      //   // var get =$('.areaName').val();
+      //   // // alert(get);
+      //   // if (get == data[i].name) {
+      //   //     alert( data[i].name);
+      //   // }
+      // }
+    // })
+}
+// }
 
-
+function showViewData(viewNo) {
+  for (var i = 0; i < data.length; i++) {
+      if (viewNo == data[i].id) {
+          document.querySelector('.modal-body').textContent = data[i].introduction;
+          // document.querySelector('.view-img').setAttribute('src', nowViewData[i].dataPic);
+          // document.querySelector('.view-img').setAttribute('alt', nowViewData[i].dataPicDesc);
+          // document.querySelector('.view-content').innerHTML = replaceAll(nowViewData[i].dataDesc, '。', '。<br />');
+          // document.querySelector('.view-add').innerHTML = nowViewData[i].dataAddress;
+          // document.querySelector('.view-tel').innerHTML = nowViewData[i].dataTel;
+          // document.querySelector('.view-time').innerHTML = replaceAll(nowViewData[i].dataOpenTime, /\n/g, '<br />');
+          // document.querySelector('.view-MRT').textContent = nowViewData[i].dataMRT;
+          // document.querySelector('.view-info').innerHTML = replaceAll(nowViewData[i].dataInfo, '。', '。<br />');
+          break;
+      }
+  }
+}
   // $.ajax({
   //   url: '/data.json',
   //   type: 'get',
