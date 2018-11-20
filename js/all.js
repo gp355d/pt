@@ -51,11 +51,11 @@ function getdata(searchValue) {
             <div class="col-sm-6">
             <div class="card bg-light>
             <div class="card-body " >
-            <h5 class="card-title areaName">`+data[i].name+`</h5>
+            <h5 class="card-title areaName text-center">`+data[i].name+`</h5>
             
-            <p class="card-text mb-2">`+data[i].address+`</p>
+            <p class="card-text mb-2 text-center">`+data[i].address+`</p>
             <div class="tt">
-            <button type="button" class="btn btn-info" data-viewNo="`+data[i].id+`"data-toggle="modal" data-target="#exampleModalLong">詳細介紹
+            <button type="button" class="btn btn-info auto" data-viewNo="`+data[i].id+`"data-toggle="modal" data-target="#exampleModalLong">詳細介紹
             </div>
             </div>
             </div>
