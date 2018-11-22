@@ -46,8 +46,16 @@ table {
 	margin: 0 auto;
 	border: 1px solid black;
 }
-
-
+.banner{
+	width:300px;
+	position:absolute;
+	top: 13%;left: 50%;
+	margin: 0 -150px 0 -150px;
+}
+.bg-cover{
+    background-size:cover;
+    background-position:center center;
+  }
 .footer{
 	
 	background: -webkit-linear-gradient(yellow,red);;

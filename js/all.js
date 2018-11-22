@@ -48,14 +48,14 @@ function getdata(searchValue) {
 
             str += `
 
-            <div class="col-sm-6">
+            <div class="col-sm-12 col-md-4">
             <div class="card bg-light>
             <div class="card-body " >
-            <h5 class="card-title areaName text-center font-weight-bold">`+data[i].name+`</h5>
+            <h5 class="card-title areaName text-center font-weight-bold mt-3">`+data[i].name+`</h5>
             
             <p class="card-text mb-2 text-center">`+data[i].address+`</p>
             <div class="btnarea text-center">
-            <button type="button" class="btn btn-info auto" data-viewNo="`+data[i].id+`"data-toggle="modal" data-target="#exampleModalLong">詳細介紹
+            <button type="button" class="btn btn-info auto mb-3" data-viewNo="`+data[i].id+`"data-toggle="modal" data-target="#exampleModalLong">詳細介紹
             </div>
             </div>
             </div>
