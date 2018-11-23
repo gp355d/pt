@@ -48,7 +48,7 @@ function getdata(searchValue) {
 
             str += `
 
-            <div class="col-sm-12 col-md-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="card bg-light>
             <div class="card-body " >
             <h5 class="card-title areaName text-center font-weight-bold mt-3">`+data[i].name+`</h5>
