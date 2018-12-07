@@ -57,7 +57,7 @@ table {
     background-position:center center;
   }
   .jumbotron-bg{
-	background-image: url(/images/4.jpg);
+	background-image: url(../images/4.jpg);
 	background-size: cover;
 	background-position: center center;
 	min-height: 450px;
